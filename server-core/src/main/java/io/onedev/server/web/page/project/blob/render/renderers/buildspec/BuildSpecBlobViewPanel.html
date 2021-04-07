@@ -1,0 +1,23 @@
+<wicket:extend>
+    <div wicket:id="content" class="build-spec build-spec-view"></div>
+    <wicket:fragment wicket:id="validFrag">
+    	<div class="head">
+        	<a wicket:id="jobs" class="jobs">Jobs</a>
+        	<a wicket:id="properties" class="properties">Properties</a>
+        </div>
+        <div wicket:id="body" class="body"></div>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="invalidFrag">
+        <div class="title">Error rendering build spec</div>
+        <div wicket:id="errorMessage" class="error-message"></div>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="jobsFrag">
+        <div class="side flex-shrink-0">
+        	<div class="navs"><div wicket:id="navs" class="nav btn-group btn-block mb-3">
+            	<a wicket:id="job" class="select btn btn-secondary justify-content-start"><span wicket:id="label"></span></a>
+            	<a wicket:id="runJob" class="run btn btn-secondary btn-icon flex-grow-0 flex-shrink-0" title="Run this job"><wicket:svg href="play" class="icon"></wicket:svg></a>
+	        </div></div>
+		</div>
+        <div wicket:id="job" class="main ml-4 flex-grow-1"></div>
+    </wicket:fragment>
+</wicket:extend>
